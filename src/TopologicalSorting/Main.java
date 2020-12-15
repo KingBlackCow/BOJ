@@ -24,7 +24,6 @@ class Main {
         for(int i=0; i<m; i++) {
             st = new StringTokenizer(br.readLine());
 
-            // v1 -> v2
             int v1 = Integer.parseInt(st.nextToken());
             int v2 = Integer.parseInt(st.nextToken());
 

@@ -1,8 +1,6 @@
-package N과M;
+package N과M_NQueen;
 
-import javax.crypto.CipherOutputStream;
 import java.io.*;
-import java.nio.Buffer;
 import java.util.*;
 
 public class Main {

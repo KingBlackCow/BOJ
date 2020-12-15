@@ -1,8 +1,10 @@
+package N과M_NQueen;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-public class Main {
+public class nQueen {
 
     public static int[] ary;
     public static int n;

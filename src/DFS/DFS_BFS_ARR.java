@@ -1,4 +1,4 @@
-package practice;
+package DFS;
 
 import java.io.*;
 import java.util.*;
