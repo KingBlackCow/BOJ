@@ -1,4 +1,4 @@
-package DFS;
+package DFS_BFS;
 
 import java.io.*;
 import java.util.*;
@@ -20,23 +20,22 @@ public class DFS_BFS_ARR {
         }
     }
 
-    //    public static void bfs(int i){
-//        Queue <Integer>q = new <Integer> LinkedList();
-//        HashMap<Integer, Boolean> hash = new HashMap<Integer, Boolean>();
-//        q.offer(i);
-//        while(!q.isEmpty()){
-//            int temp = q.poll();
-//            visit[temp] = true;
-//            System.out.print(temp+" ");
-//
-//            for(int j : mat.get(temp)){
-//                if(visit[j] == false && !hash.containsKey(j)){
-//                    q.offer(j);
-//                    hash.put(j, true);
-//                }
-//            }
-//        }
-//    }
+    public static void bfs(int i) {
+        Queue<Integer> q = new LinkedList<Integer>();
+        q.add(i);
+        while (!q.isEmpty()) {
+            int tmp = q.poll();
+            visit[tmp]=true;
+            System.out.print(tmp + " ");
+            for (int j = 1; j < V + 1; j++) {
+                if (visit[j] == false && mat[tmp][j] == 1) {
+                    visit[j] = true;
+                    q.offer(j);
+                }
+            }
+        }
+    }
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -44,7 +43,7 @@ public class DFS_BFS_ARR {
         V = scan.nextInt();
         E = scan.nextInt();
         int start = scan.nextInt();
-        mat = new int[V+1][V+1];
+        mat = new int[V + 1][V + 1];
         visit = new boolean[V + 1];
         for (int j = 0; j < V + 1; j++) {
             Arrays.fill(mat[j], 0);
@@ -59,7 +58,7 @@ public class DFS_BFS_ARR {
         dfs(start);
         System.out.println();
         visit = new boolean[V + 1];
-        //bfs(start);
+        bfs(start);
     }
 }
 

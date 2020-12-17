@@ -1,4 +1,4 @@
-package N과M_NQueen;
+package NandM_NQueen;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

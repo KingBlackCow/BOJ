@@ -1,4 +1,4 @@
-package 다익스트라;
+package Dijkstra;
 
 import java.io.*;
 import java.util.*;

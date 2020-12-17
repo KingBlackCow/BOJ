@@ -1,5 +1,11 @@
-import java.io.*;
-import java.util.*;
+package Stack;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
 
 public class Main2 {
     public static void main(String[] args) throws IOException {
@@ -12,28 +18,26 @@ public class Main2 {
             list.add(Integer.parseInt(br.readLine()));
         }
 
-        int num = 1;
+        int num=1;
         while (!list.isEmpty()) {
-            if (!stack.isEmpty() && (stack.peek().equals(list.get(0)))) {
+            if(!stack.isEmpty()&&(stack.peek().equals(list.get(0)))){
                 stack.pop();
                 list.remove(0);
                 sb.append('-');
                 sb.append('\n');
-            } else {
+            } else{
                 stack.push(num++);
                 sb.append('+');
                 sb.append('\n');
             }
-            if (num > n + 1) {
+            if(num>n+1){
                 System.out.println("NO");
                 break;
             }
         }
-        if (list.isEmpty()) {
+        if (list.isEmpty()){
             System.out.println(sb.toString());
         }
 
     }
 }
-
-
