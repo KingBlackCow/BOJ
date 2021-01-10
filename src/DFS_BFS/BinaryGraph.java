@@ -1,9 +1,11 @@
+package DFS_BFS;
+
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class Main {
+public class BinaryGraph {
     static boolean res;
     static boolean[] visited;
     static List<Integer>[] list;

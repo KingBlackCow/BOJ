@@ -13,7 +13,7 @@ public class DFS_BFS_ARR {
     public static void dfs(int k) {
         visit[k] = true;
         System.out.print(k + " ");
-        for (int i = 1; i < V + 1; i++) {  // 배열 null check
+        for (int i = 1; i < V + 1; i++) {
             if (mat[k][i] == 1 && !visit[i]) {
                 dfs(i);
             }
